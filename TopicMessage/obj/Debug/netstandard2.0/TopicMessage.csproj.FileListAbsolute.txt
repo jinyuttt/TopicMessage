@@ -1,8 +1,0 @@
-E:\study\WPF\TopicMessage\TopicMessage\TopicMessage\obj\Debug\netstandard2.0\TopicMessage.csproj.CoreCompileInputs.cache
-E:\study\WPF\TopicMessage\TopicMessage\TopicMessage\obj\Debug\netstandard2.0\TopicMessage.AssemblyInfoInputs.cache
-E:\study\WPF\TopicMessage\TopicMessage\TopicMessage\obj\Debug\netstandard2.0\TopicMessage.AssemblyInfo.cs
-E:\study\WPF\TopicMessage\TopicMessage\TopicMessage\bin\Debug\netstandard2.0\TopicMessage.deps.json
-E:\study\WPF\TopicMessage\TopicMessage\TopicMessage\bin\Debug\netstandard2.0\TopicMessage.dll
-E:\study\WPF\TopicMessage\TopicMessage\TopicMessage\bin\Debug\netstandard2.0\TopicMessage.pdb
-E:\study\WPF\TopicMessage\TopicMessage\TopicMessage\obj\Debug\netstandard2.0\TopicMessage.dll
-E:\study\WPF\TopicMessage\TopicMessage\TopicMessage\obj\Debug\netstandard2.0\TopicMessage.pdb

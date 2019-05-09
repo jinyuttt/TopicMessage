@@ -20,17 +20,18 @@ namespace TopicMessage
 {
     public delegate void TopicNotifyHandler(object sender, object info);
     /* ============================================================================== 
-* 功能描述：Observer  订阅主题
+* 功能描述：Observer  订阅主题,与一个主题绑定
 * 创 建 者：jinyu 
 * 创建日期：2019 
 * 更新时间 ：2019
 * ==============================================================================*/
-    class Observer
+  internal  class Observer
     {
         /// <summary>
         /// 接收数据通知
         /// </summary>
         public TopicNotifyHandler notifyHandler = null;
+
         /// <summary>
         /// 订阅者名字
         /// </summary>

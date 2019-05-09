@@ -16,6 +16,8 @@
 #endregion
 
 
+using System;
+
 namespace TopicMessage
 {
     /* ============================================================================== 
@@ -26,6 +28,15 @@ namespace TopicMessage
 * ==============================================================================*/
     public  class Publisher
     {
+        private static readonly Lazy<Publisher>  publisher=new Lazy<Publisher>();
+
+        /// <summary>
+        /// 单例
+        /// </summary>
+        public static Publisher Singleton
+        {
+            get { return publisher.Value; }
+        }
 
         /// <summary>
         /// 发布数据

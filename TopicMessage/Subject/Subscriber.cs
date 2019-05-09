@@ -15,13 +15,14 @@
 //----------------------------------------------------------------*/
 #endregion
 
+using System;
 using System.Collections.Generic;
 
 namespace TopicMessage
 {
     public delegate void SubscribeNotifyHandler(object sender,string topic, object info);
     /* ============================================================================== 
-* 功能描述：Subscriber 
+* 功能描述：Subscriber 订阅信息
 * 创 建 者：jinyu 
 * 创建日期：2019 
 * 更新时间 ：2019
@@ -30,8 +31,16 @@ namespace TopicMessage
     {
         readonly Dictionary<string, Observer> dicTopic = new Dictionary<string, Observer>();
         public event SubscribeNotifyHandler TopicDataNotify;
+        private static readonly Lazy<Subscriber> subscriber=new Lazy<Subscriber>();
         private readonly object lock_obj = new object();
 
+        /// <summary>
+        /// 单例
+        /// </summary>
+        public static Subscriber Singleton
+        {
+            get { return subscriber.Value; }
+        }
         /// <summary>
         /// 订阅主题
         /// </summary>
@@ -75,10 +84,15 @@ namespace TopicMessage
         /// <param name="info"></param>
         private void Receive(object sender,object info)
         {
-            Observer observer = sender as Observer;
-            if(observer!=null&& TopicDataNotify!=null)
+            //  Observer observer = sender as Observer;
+            if (info == null)
             {
-                TopicDataNotify(this, observer.Name, info);
+                return;
+            }
+            Topic message = info as Topic;
+            if(TopicDataNotify!=null)
+            {
+                TopicDataNotify(this, message.Name, message.Info);
             }
         }
 
